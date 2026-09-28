@@ -26,10 +26,11 @@ public class EnemyState : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Bullet"))
         {
             PlayerData playerData = new PlayerData();
             hp -= playerData.attack;
+            Debug.Log("Enemy残りHP" + hp);
         }
     }
 }

@@ -45,7 +45,7 @@ public class PlayerControl : MonoBehaviour
         {
             EnemyState enemyState = new EnemyState();
             playerData.playerHp -= enemyState.attack;
-            
+            Debug.Log("プレイヤーHP残り" + playerData.playerHp);
         }
     }
 }
